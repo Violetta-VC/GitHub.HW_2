@@ -1,0 +1,18 @@
+BugReports
+1. ID 1.1
+2. Summary
+Ошибка PHP появляется в окне после ввода SQL запроса в поле логина.
+3. Descriprion
+Если ввести SQL запрос в поле логина и нажать кнопку [Поехали] появляется ошибка PHP в
+Фактический результат: Предупреждение: mysqli_num_rows() ожидает, что параметр 1 будет mysqli_result, логическим значением, заданным в C:\OpenServer\domains\megatask\index.php в строке 15.
+Ожидаемый результат: Появляется окно с текстом Ошибка
+Воспроизведено на: Chrome
+Воспроизводимость: всегда
+Обходной путь: нет
+4. Steps to reproduce
+	1) Open page via URL http://megatask/
+	2) Enter  DB request (SELECT * FROM users WHERE u_ul LIKE ‘a%’) in field "Логин"
+	3) Enter  correct password (b) in field "Пароль"
+	4) Press [Поехали] button
+5. Severity	Minor
+6. Priority	Normal
